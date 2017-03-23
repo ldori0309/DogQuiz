@@ -1,494 +1,283 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/quizLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/paws2_2"
-    tools:context="com.example.android.dogquiz.MainActivity">
+    android:background="@drawable/paws2_2">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/activity_main"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingTop="15dp"
-        tools:context="com.example.android.dogquiz.MainActivity">
+        android:paddingTop="@dimen/fifteenDp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <RelativeLayout style="@style/RelativeLayoutStyle">
 
             <TextView
                 android:id="@+id/q1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                style="@style/QuestionStyle"
                 android:fontFamily="sans-serif-condensed"
-                android:padding="15dp"
-                android:text="Question 1: Select one option!"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:text="@string/question1"
+                android:textAlignment="center" />
 
             <ImageView
                 android:id="@+id/quiz1"
-                android:layout_width="wrap_content"
-                android:layout_height="270dp"
+                style="@style/ImageViewStyle"
+                android:layout_height="@dimen/twohundredsevetyDp"
                 android:layout_below="@id/q1"
-                android:scaleType="fitCenter"
                 android:src="@drawable/quiz1" />
 
-            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            <RadioGroup
                 android:id="@+id/quiz1q"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/quiz1"
-                android:layout_centerHorizontal="true"
-                android:orientation="vertical"
-                android:paddingTop="10dp">
+                style="@style/RadioGroupStyle"
+                android:layout_below="@id/quiz1">
 
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Chow Chow"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogChowChow" />
 
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Border Collie"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogBorderCollie" />
 
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Dalmatian"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogDalmatian" />
             </RadioGroup>
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="15dp">
+        <RelativeLayout style="@style/RelativeLayoutStyle">
 
             <TextView
                 android:id="@+id/q2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/QuestionStyle"
                 android:fontFamily="sans-serif-condensed"
-                android:padding="15dp"
-                android:text="Question 2: Write down the name of the breed!"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:text="@string/question2"
+                android:textAlignment="center" />
 
             <ImageView
                 android:id="@+id/quiz2"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                style="@style/ImageViewStyle"
                 android:layout_below="@id/q2"
-                android:scaleType="fitCenter"
                 android:src="@drawable/quiz2" />
 
             <EditText
                 android:id="@+id/quiz2q"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/EditTextStyle"
                 android:layout_below="@id/quiz2"
-                android:hint="Enter solution here"
-                android:inputType="textCapWords"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:paddingTop="15dp"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:hint="@string/enterSol" />
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="15dp">
+        <RelativeLayout style="@style/RelativeLayoutStyle">
 
             <TextView
                 android:id="@+id/q3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/QuestionStyle"
                 android:fontFamily="sans-serif-condensed"
-                android:padding="15dp"
-                android:text="Question 3: Select one option!"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:text="@string/question3"
+                android:textAlignment="center" />
 
             <ImageView
                 android:id="@+id/quiz3"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                style="@style/ImageViewStyle"
                 android:layout_below="@id/q3"
-                android:scaleType="fitCenter"
                 android:src="@drawable/quiz3" />
 
-            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            <RadioGroup
                 android:id="@+id/quiz3q"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/quiz3"
-                android:layout_centerHorizontal="true"
-                android:orientation="vertical"
-                android:paddingTop="10dp">
+                style="@style/RadioGroupStyle"
+                android:layout_below="@id/quiz3">
 
                 <RadioButton
-                    android:id="@+id/quiz3p1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Poodle"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-                /android:onClick="onRadioButtonClicked"/>
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogPoodle" />
 
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Puli"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogPuli" />
 
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Mudi"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogMudi" />
             </RadioGroup>
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="15dp">
+        <RelativeLayout style="@style/RelativeLayoutStyle">
 
             <TextView
                 android:id="@+id/q4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/QuestionStyle"
                 android:fontFamily="sans-serif-condensed"
-                android:padding="15dp"
-                android:text="Question 4: Select one or more options!"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:text="@string/question4"
+                android:textAlignment="center" />
 
             <ImageView
                 android:id="@+id/quiz4"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                style="@style/ImageViewStyle"
                 android:layout_below="@id/q4"
-                android:scaleType="fitCenter"
                 android:src="@drawable/quiz4" />
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/quiz4"
-                android:layout_centerHorizontal="true"
-                android:orientation="vertical"
-                android:paddingTop="10dp">
+            <LinearLayout
+                style="@style/CheckboxesStyle"
+                android:layout_below="@id/quiz4">
 
                 <CheckBox
                     android:id="@+id/quiz4p1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bichon Frise"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogBichonFrise" />
 
                 <CheckBox
                     android:id="@+id/quiz4p2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Mastiff"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogMastiff" />
 
                 <CheckBox
                     android:id="@+id/quiz4p3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Poodle"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogPoodle" />
 
                 <CheckBox
                     android:id="@+id/quiz4p4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fox Terrier"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogFoxTerrier" />
 
                 <CheckBox
                     android:id="@+id/quiz4p5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Labrador"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogLabrador" />
             </LinearLayout>
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="15dp">
+        <RelativeLayout style="@style/RelativeLayoutStyle">
 
             <TextView
                 android:id="@+id/q5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/QuestionStyle"
                 android:fontFamily="sans-serif-condensed"
-                android:padding="15dp"
-                android:text="Question 5: Write down the name of the breed!"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:text="@string/question5"
+                android:textAlignment="center" />
 
             <ImageView
                 android:id="@+id/quiz5"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                style="@style/ImageViewStyle"
                 android:layout_below="@id/q5"
-                android:scaleType="fitCenter"
                 android:src="@drawable/quiz5" />
 
             <EditText
                 android:id="@+id/quiz5q"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/EditTextStyle"
                 android:layout_below="@id/quiz5"
-                android:hint="Enter solution here"
-                android:inputType="textCapWords"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:paddingTop="15dp"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:hint="@string/enterSol" />
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="15dp">
+        <RelativeLayout style="@style/RelativeLayoutStyle">
 
             <TextView
                 android:id="@+id/q6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/QuestionStyle"
                 android:fontFamily="sans-serif-condensed"
-                android:padding="15dp"
-                android:text="Question 6: Select one option!"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:text="@string/question6"
+                android:textAlignment="center" />
 
             <ImageView
                 android:id="@+id/quiz6"
-                android:layout_width="wrap_content"
-                android:layout_height="170dp"
+                style="@style/ImageViewStyle"
+                android:layout_height="@dimen/hundredseventyDp"
                 android:layout_below="@id/q6"
-                android:scaleType="fitCenter"
                 android:src="@drawable/quiz6" />
 
-            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            <RadioGroup
                 android:id="@+id/quiz6q"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/quiz6"
-                android:layout_centerHorizontal="true"
-                android:orientation="vertical"
-                android:paddingTop="10dp">
+                style="@style/RadioGroupStyle"
+                android:layout_below="@id/quiz6">
 
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Jack Russel Terrier"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogJackRusselTerrier" />
 
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fox Terrier"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogFoxTerrier" />
 
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Boston Terrier"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogBostonTerrier" />
             </RadioGroup>
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="15dp">
+        <RelativeLayout style="@style/RelativeLayoutStyle">
 
             <TextView
                 android:id="@+id/q7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/QuestionStyle"
                 android:fontFamily="sans-serif-condensed"
-                android:padding="15dp"
-                android:text="Question 7: Write down the name of the breed!"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:text="@string/question7"
+                android:textAlignment="center" />
 
             <ImageView
                 android:id="@+id/quiz7"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                style="@style/ImageViewStyle"
                 android:layout_below="@id/q7"
-                android:scaleType="fitCenter"
                 android:src="@drawable/quiz7" />
 
             <EditText
                 android:id="@+id/quiz7q"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/EditTextStyle"
                 android:layout_below="@id/quiz7"
-                android:hint="Enter solution here"
-                android:inputType="textCapWords"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:paddingTop="15dp"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:hint="@string/enterSol" />
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="15dp">
+        <RelativeLayout style="@style/RelativeLayoutStyle">
 
             <TextView
                 android:id="@+id/q8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/QuestionStyle"
                 android:fontFamily="sans-serif-condensed"
-                android:padding="15dp"
-                android:text="Question 8: Select one or more options!"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:text="@string/question8"
+                android:textAlignment="center" />
 
             <ImageView
                 android:id="@+id/quiz8"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                style="@style/ImageViewStyle"
                 android:layout_below="@id/q8"
-                android:scaleType="fitCenter"
                 android:src="@drawable/quiz8" />
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/quiz8"
-                android:layout_centerHorizontal="true"
-                android:orientation="vertical"
-                android:paddingTop="10dp">
+            <LinearLayout
+                style="@style/CheckboxesStyle"
+                android:layout_below="@id/quiz8">
 
                 <CheckBox
                     android:id="@+id/quiz8p1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Collie"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogCollie" />
 
                 <CheckBox
                     android:id="@+id/quiz8p2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Golden Retriever"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogGoldenRetriever" />
 
                 <CheckBox
                     android:id="@+id/quiz8p3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pug"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogPug" />
 
                 <CheckBox
                     android:id="@+id/quiz8p4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bulldog"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogBulldog" />
 
                 <CheckBox
                     android:id="@+id/quiz8p5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Boston Terrier"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/ButtonStyle"
+                    android:text="@string/dogBostonTerrier" />
             </LinearLayout>
         </RelativeLayout>
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
+            style="@style/SubmitButtonStyle"
             android:fontFamily="cursive"
-            android:gravity="center_horizontal"
             android:onClick="submitAnswers"
-            android:text="Submit answers"
-            android:textAllCaps="true"
-            android:textColor="@android:color/black"
-            android:textSize="30sp" />
+            android:text="@string/submitAns" />
 
     </LinearLayout>
 

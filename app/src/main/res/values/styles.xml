@@ -8,7 +8,7 @@
         <item name="colorAccent">#CFD8DC</item>
     </style>
 
-    <!-- Style for header text in the order form -->
+    <!-- Style for header text -->
     <style name="HeaderTextStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">48dp</item>
@@ -17,6 +17,73 @@
         <item name="android:textSize">15sp</item>
     </style>
 
+    <style name="QuestionStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:padding">@dimen/fifteenDp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/twentyfiveSp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RelativeLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/fifteenDp</item>
+    </style>
+
+    <style name="ImageViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/twohundredDp</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="RadioGroupStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:paddingTop">@dimen/tenDp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:paddingLeft">@dimen/fifteenDp</item>
+        <item name="android:paddingRight">@dimen/fifteenDp</item>
+        <item name="android:paddingTop">@dimen/fifteenDp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/twentySp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/twentySp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CheckboxesStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">@dimen/tenDp</item>
+    </style>
+
+    <style name="SubmitButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/thirtyDp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/thirtySp</item>
+    </style>
 
 </resources>
 

@@ -1,3 +1,43 @@
-<resources>
-    <string name="app_name">DogQuiz</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Dog Quiz</string>
+    <string name="intro1">Can you recognize the dog breed?</string>
+    <string name="intro2">Start the quiz now</string>
+
+    <string name="dogChowChow">Chow Chow</string>
+    <string name="dogBorderCollie">Border Collie</string>
+    <string name="dogDalmatian">Dalmatian</string>
+    <string name="dogPoodle">Poodle</string>
+    <string name="dogPuli">Puli</string>
+    <string name="dogMudi">Mudi</string>
+    <string name="dogBichonFrise">Bichon Frise</string>
+    <string name="dogMastiff">Mastiff</string>
+    <string name="dogFoxTerrier">Fox Terrier</string>
+    <string name="dogLabrador">Labrador</string>
+    <string name="dogJackRusselTerrier">Jack Russel Terrier</string>
+    <string name="dogBostonTerrier">Boston Terrier</string>
+    <string name="dogCollie">Collie</string>
+    <string name="dogGoldenRetriever">Golden Retriever</string>
+    <string name="dogPug">Pug</string>
+    <string name="dogBulldog">Bulldog</string>
+    <string name="dogGermanShepherd">German Shepherd</string>
+
+    <string name="question1">Question 1: Select one option!</string>
+    <string name="question2">Question 2: Write down the name of the breed!</string>
+    <string name="question3">Question 3: Select one option!</string>
+    <string name="question4">Question 4: Select one or more options!</string>
+    <string name="question5">Question 5: Write down the name of the breed!</string>
+    <string name="question6">Question 6: Select one option!</string>
+    <string name="question7">Question 7: Write down the name of the breed!</string>
+    <string name="question8">Question 8: Select one or more options!</string>
+
+    <string name="enterSol">Enter solution here</string>
+    <string name="submitAns">Submit answers</string>
+
+    <string name="resultMessage1">Congratulations! You answered <xliff:g id="goodAnswers" example="1">%d</xliff:g>
+        out of 8 questions correctly! You are a dog expert!</string>
+    <string name="resultMessage2">Congratulations! You answered <xliff:g id="goodAnswers" example="1">%d</xliff:g>
+        out of 8 questions correctly! Not bad, but you could imrpove!</string>
+    <string name="resultMessage3">You answered <xliff:g id="goodAnswers" example="1">%d</xliff:g>
+        out of 8 questions correctly! You should read more about dogs!</string>
+
 </resources>
