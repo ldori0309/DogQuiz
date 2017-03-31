@@ -20,7 +20,7 @@ public class Results extends AppCompatActivity {
         showMessage(score);
     }
 
-    private void showMessage(int score){
+    public void showMessage(int score){
         String messageToShow;
 
         if (score > 6){

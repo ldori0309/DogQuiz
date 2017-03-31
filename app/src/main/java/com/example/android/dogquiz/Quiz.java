@@ -10,7 +10,7 @@ import android.widget.RadioGroup;
 
 public class Quiz extends AppCompatActivity {
 
-    private int goodAnswers = 0;
+    int goodAnswers = 0;
     RadioGroup q1;
     EditText q2;
     RadioGroup q3;
@@ -27,6 +27,7 @@ public class Quiz extends AppCompatActivity {
     CheckBox q8p3;
     CheckBox q8p4;
     CheckBox q8p5;
+    int q1answer, q3answer, q6answer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,24 @@ public class Quiz extends AppCompatActivity {
         q8p3 = (CheckBox) findViewById(R.id.quiz8p3);
         q8p4 = (CheckBox) findViewById(R.id.quiz8p4);
         q8p5 = (CheckBox) findViewById(R.id.quiz8p5);
+        if (savedInstanceState !=null) {
+            q1answer = savedInstanceState.getInt("q1answer");
+            q3answer = savedInstanceState.getInt("q3answer");
+            q6answer = savedInstanceState.getInt("q6answer");
+            if (q1.getChildAt(q1answer)!=null) q1.check(q1.getChildAt(q1answer).getId());
+            if (q3.getChildAt(q3answer)!=null) q3.check(q3.getChildAt(q3answer).getId());
+            if (q6.getChildAt(q6answer)!=null) q6.check(q6.getChildAt(q6answer).getId());
+        }
+    }
+
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        q1answer = q1.indexOfChild(findViewById(q1.getCheckedRadioButtonId()));
+        q3answer = q3.indexOfChild(findViewById(q3.getCheckedRadioButtonId()));
+        q6answer = q6.indexOfChild(findViewById(q6.getCheckedRadioButtonId()));
+        savedInstanceState.putInt("q1answer", q1answer);
+        savedInstanceState.putInt("q3answer", q3answer);
+        savedInstanceState.putInt("q6answer", q6answer);
+        super.onSaveInstanceState(savedInstanceState);
     }
 
     public void submitAnswers(View view) {
@@ -59,13 +78,13 @@ public class Quiz extends AppCompatActivity {
 
     private void checkAnswers(){
 
-        int q1answer = q1.indexOfChild(findViewById(q1.getCheckedRadioButtonId()));
+        q1answer = q1.indexOfChild(findViewById(q1.getCheckedRadioButtonId()));
         if(q1answer == 0) goodAnswers++;
 
         String q2answer = q2.getText().toString();
         if (q2answer.toLowerCase().equals(getResources().getString(R.string.dogBorderCollie).toLowerCase())) goodAnswers++;
 
-        int q3answer = q3.indexOfChild(findViewById(q3.getCheckedRadioButtonId()));
+        q3answer = q3.indexOfChild(findViewById(q3.getCheckedRadioButtonId()));
         if(q3answer == 1) goodAnswers++;
 
         boolean q4p1answer = q4p1.isChecked();
@@ -78,7 +97,7 @@ public class Quiz extends AppCompatActivity {
         String q5answer = q5.getText().toString();
         if (q5answer.toLowerCase().equals(getResources().getString(R.string.dogPug).toLowerCase())) goodAnswers++;
 
-        int q6answer = q6.indexOfChild(findViewById(q6.getCheckedRadioButtonId()));
+        q6answer = q6.indexOfChild(findViewById(q6.getCheckedRadioButtonId()));
         if(q6answer == 0) goodAnswers++;
 
         String q7answer = q7.getText().toString();
