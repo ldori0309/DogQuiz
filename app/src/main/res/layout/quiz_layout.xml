@@ -1,284 +1,545 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/quizLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/paws2_2">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingTop="@dimen/fifteenDp">
+        android:scaleType="centerCrop"
+        android:src="@drawable/frame" />
 
-        <RelativeLayout style="@style/RelativeLayoutStyle">
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/twentyDp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF59D"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/q1"
                 style="@style/QuestionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FDD835"
                 android:fontFamily="sans-serif-condensed"
-                android:text="@string/question1"
-                android:textAlignment="center" />
+                android:padding="@dimen/fiveDp"
+                android:paddingBottom="@dimen/tenDp"
+                android:text="@string/question1" />
 
             <ImageView
-                android:id="@+id/quiz1"
-                style="@style/ImageViewStyle"
-                android:layout_height="@dimen/twohundredsevetyDp"
-                android:layout_below="@id/q1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zeroDp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tenDp"
+                android:layout_weight="4"
                 android:src="@drawable/quiz1" />
 
             <RadioGroup
                 android:id="@+id/quiz1q"
                 style="@style/RadioGroupStyle"
-                android:layout_below="@id/quiz1">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
                 <RadioButton
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogChowChow" />
 
                 <RadioButton
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogBorderCollie" />
 
                 <RadioButton
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogDalmatian" />
             </RadioGroup>
-        </RelativeLayout>
 
-        <RelativeLayout style="@style/RelativeLayoutStyle">
+            <Button
+                style="@style/startButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tenDp"
+                android:onClick="nextQuestion"
+                android:text="@string/nextQuestion"
+                android:textSize="@dimen/fifteenSp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/twentyDp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E0F2F1"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/q2"
                 style="@style/QuestionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4DB6AC"
                 android:fontFamily="sans-serif-condensed"
-                android:text="@string/question2"
-                android:textAlignment="center" />
+                android:padding="@dimen/fiveDp"
+                android:text="@string/question2" />
 
             <ImageView
                 android:id="@+id/quiz2"
-                style="@style/ImageViewStyle"
-                android:layout_below="@id/q2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zeroDp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tenDp"
+                android:layout_weight="4"
+                android:scaleType="centerCrop"
                 android:src="@drawable/quiz2" />
 
             <EditText
                 android:id="@+id/quiz2q"
                 style="@style/EditTextStyle"
-                android:layout_below="@id/quiz2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/fiveDp"
+                android:layout_weight="1"
                 android:hint="@string/enterSol" />
-        </RelativeLayout>
 
-        <RelativeLayout style="@style/RelativeLayoutStyle">
+            <Button
+                style="@style/startButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tenDp"
+                android:onClick="nextQuestion"
+                android:text="@string/nextQuestion"
+                android:textSize="@dimen/fifteenSp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/twentyDp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#D7CCC8"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/q3"
                 style="@style/QuestionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#5D4037"
                 android:fontFamily="sans-serif-condensed"
-                android:text="@string/question3"
-                android:textAlignment="center" />
+                android:padding="5dp"
+                android:text="@string/question3" />
 
             <ImageView
                 android:id="@+id/quiz3"
-                style="@style/ImageViewStyle"
-                android:layout_below="@id/q3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zeroDp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tenDp"
+                android:layout_weight="4"
+                android:scaleType="centerCrop"
                 android:src="@drawable/quiz3" />
 
             <RadioGroup
                 android:id="@+id/quiz3q"
                 style="@style/RadioGroupStyle"
-                android:layout_below="@id/quiz3">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
                 <RadioButton
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogPoodle" />
 
                 <RadioButton
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogPuli" />
 
                 <RadioButton
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogMudi" />
             </RadioGroup>
-        </RelativeLayout>
 
-        <RelativeLayout style="@style/RelativeLayoutStyle">
+            <Button
+                style="@style/startButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tenDp"
+                android:onClick="nextQuestion"
+                android:text="@string/nextQuestion"
+                android:textSize="@dimen/fifteenSp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#C8E6C9"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/q4"
                 style="@style/QuestionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#43A047"
                 android:fontFamily="sans-serif-condensed"
-                android:text="@string/question4"
-                android:textAlignment="center" />
+                android:padding="@dimen/fiveDp"
+                android:text="@string/question4" />
 
             <ImageView
                 android:id="@+id/quiz4"
-                style="@style/ImageViewStyle"
-                android:layout_below="@id/q4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tenDp"
+                android:layout_weight="4"
+                android:scaleType="centerCrop"
                 android:src="@drawable/quiz4" />
 
             <LinearLayout
-                style="@style/CheckboxesStyle"
-                android:layout_below="@id/quiz4">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
                 <CheckBox
                     android:id="@+id/quiz4p1"
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogBichonFrise" />
 
                 <CheckBox
                     android:id="@+id/quiz4p2"
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogMastiff" />
 
                 <CheckBox
                     android:id="@+id/quiz4p3"
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogPoodle" />
 
                 <CheckBox
                     android:id="@+id/quiz4p4"
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogFoxTerrier" />
 
                 <CheckBox
                     android:id="@+id/quiz4p5"
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogLabrador" />
-            </LinearLayout>
-        </RelativeLayout>
 
-        <RelativeLayout style="@style/RelativeLayoutStyle">
+            </LinearLayout>
+
+            <Button
+                style="@style/startButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tenDp"
+                android:onClick="nextQuestion"
+                android:text="@string/nextQuestion"
+                android:textSize="@dimen/fifteenSp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/twentyDp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F8BBD0"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/q5"
                 style="@style/QuestionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E91E63"
                 android:fontFamily="sans-serif-condensed"
-                android:text="@string/question5"
-                android:textAlignment="center" />
+                android:padding="@dimen/fiveDp"
+                android:text="@string/question5" />
 
             <ImageView
                 android:id="@+id/quiz5"
-                style="@style/ImageViewStyle"
-                android:layout_below="@id/q5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tenDp"
+                android:layout_weight="4"
+                android:scaleType="centerCrop"
                 android:src="@drawable/quiz5" />
 
             <EditText
                 android:id="@+id/quiz5q"
                 style="@style/EditTextStyle"
-                android:layout_below="@id/quiz5"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/zeroDp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/fiveDp"
+                android:layout_weight="1"
                 android:hint="@string/enterSol" />
-        </RelativeLayout>
 
-        <RelativeLayout style="@style/RelativeLayoutStyle">
+            <Button
+                style="@style/startButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tenDp"
+                android:onClick="nextQuestion"
+                android:text="@string/nextQuestion"
+                android:textSize="@dimen/fifteenSp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/twentyDp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E1BEE7"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/q6"
                 style="@style/QuestionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#8E24AA"
                 android:fontFamily="sans-serif-condensed"
-                android:text="@string/question6"
-                android:textAlignment="center" />
+                android:padding="@dimen/fiveDp"
+                android:text="@string/question6" />
 
             <ImageView
                 android:id="@+id/quiz6"
-                style="@style/ImageViewStyle"
-                android:layout_height="@dimen/hundredseventyDp"
-                android:layout_below="@id/q6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tenDp"
+                android:layout_weight="4"
+                android:scaleType="centerCrop"
                 android:src="@drawable/quiz6" />
 
             <RadioGroup
                 android:id="@+id/quiz6q"
                 style="@style/RadioGroupStyle"
-                android:layout_below="@id/quiz6">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
                 <RadioButton
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogJackRusselTerrier" />
 
                 <RadioButton
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogFoxTerrier" />
 
                 <RadioButton
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogBostonTerrier" />
-            </RadioGroup>
-        </RelativeLayout>
 
-        <RelativeLayout style="@style/RelativeLayoutStyle">
+            </RadioGroup>
+
+            <Button
+                style="@style/startButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tenDp"
+                android:onClick="nextQuestion"
+                android:text="@string/nextQuestion"
+                android:textSize="@dimen/fifteenSp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/twentyDp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFCDD2"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/q7"
                 style="@style/QuestionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E53935"
                 android:fontFamily="sans-serif-condensed"
-                android:text="@string/question7"
-                android:textAlignment="center" />
+                android:padding="@dimen/fiveDp"
+                android:text="@string/question7" />
 
             <ImageView
                 android:id="@+id/quiz7"
-                style="@style/ImageViewStyle"
-                android:layout_below="@id/q7"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tenDp"
+                android:layout_weight="4"
+                android:scaleType="centerCrop"
                 android:src="@drawable/quiz7" />
 
             <EditText
                 android:id="@+id/quiz7q"
                 style="@style/EditTextStyle"
-                android:layout_below="@id/quiz7"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/zeroDp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/fiveDp"
+                android:layout_weight="1"
                 android:hint="@string/enterSol" />
-        </RelativeLayout>
 
-        <RelativeLayout style="@style/RelativeLayoutStyle">
+            <Button
+                style="@style/startButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tenDp"
+                android:onClick="nextQuestion"
+                android:text="@string/nextQuestion"
+                android:textSize="@dimen/fifteenSp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/twentyDp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E0F7FA"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/q8"
                 style="@style/QuestionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0097A7"
                 android:fontFamily="sans-serif-condensed"
-                android:text="@string/question8"
-                android:textAlignment="center" />
+                android:padding="@dimen/fiveDp"
+                android:text="@string/question8" />
 
             <ImageView
                 android:id="@+id/quiz8"
-                style="@style/ImageViewStyle"
-                android:layout_below="@id/q8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tenDp"
+                android:layout_weight="4"
+                android:scaleType="centerCrop"
                 android:src="@drawable/quiz8" />
 
             <LinearLayout
-                style="@style/CheckboxesStyle"
-                android:layout_below="@id/quiz8">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
                 <CheckBox
                     android:id="@+id/quiz8p1"
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogCollie" />
 
                 <CheckBox
                     android:id="@+id/quiz8p2"
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogGoldenRetriever" />
 
                 <CheckBox
                     android:id="@+id/quiz8p3"
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogPug" />
 
                 <CheckBox
                     android:id="@+id/quiz8p4"
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogBulldog" />
 
                 <CheckBox
                     android:id="@+id/quiz8p5"
-                    style="@style/ButtonStyle"
+                    style="@style/radioButtonStyle"
                     android:text="@string/dogBostonTerrier" />
+
             </LinearLayout>
-        </RelativeLayout>
 
-        <Button
-            style="@style/SubmitButtonStyle"
-            android:fontFamily="cursive"
-            android:onClick="submitAnswers"
-            android:text="@string/submitAns" />
+            <Button
+                style="@style/startButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/tenDp"
+                android:onClick="submitAnswers"
+                android:text="@string/showScore"
+                android:textSize="@dimen/fifteenSp" />
 
-    </LinearLayout>
+        </LinearLayout>
 
-</ScrollView>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

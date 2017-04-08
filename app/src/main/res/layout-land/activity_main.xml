@@ -21,12 +21,11 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/zeroDp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
             android:paddingLeft="@dimen/twentyDp"
             android:paddingRight="@dimen/twentyDp"
-            android:paddingTop="@dimen/thirtyDp"
+            android:paddingTop="@dimen/tenDp"
             android:text="@string/intro1"
             android:textAlignment="center"
             android:textColor="@color/grey"
@@ -37,7 +36,7 @@
             android:id="@+id/intro_image"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/zeroDp"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:scaleType="fitCenter"
             android:layout_gravity="center"
             android:src="@drawable/quiz_intro" />
@@ -45,7 +44,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="@dimen/zeroDp"
-            android:layout_weight="0.5"
+            android:layout_weight="1"
             style="@style/startButtonStyle"
             android:layout_gravity="center_vertical|center_horizontal"
             android:layout_marginBottom="@dimen/tenDp"

@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     public void startQuiz(View view) {
         Intent newQuiz = new Intent(this, Quiz.class);
         startActivity(newQuiz);
+        this.finish();
     }
 
 }

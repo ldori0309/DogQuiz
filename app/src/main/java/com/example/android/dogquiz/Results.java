@@ -1,5 +1,6 @@
 package com.example.android.dogquiz;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -8,6 +9,7 @@ import android.text.Layout;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.AlignmentSpan;
+import android.view.View;
 import android.widget.Toast;
 
 public class Results extends AppCompatActivity {
@@ -43,9 +45,15 @@ public class Results extends AppCompatActivity {
         Toast.makeText(this, centeredMessage, Toast.LENGTH_LONG).show();
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-    @Override
-    public void onBackPressed(){
-        this.finishAffinity();
+    public void restartQuiz(View view) {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("EXIT", true);
+        startActivity(intent);
+        this.finish();
+    }
+
+    public void finishQuiz(View view) {
+        this.finish();
     }
 }

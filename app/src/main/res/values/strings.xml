@@ -1,7 +1,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Dog Quiz</string>
     <string name="intro1">Can you recognize the dog breed?</string>
-    <string name="intro2">Start the quiz now</string>
+    <string name="intro2">Start quiz now</string>
 
     <string name="dogChowChow">Chow Chow</string>
     <string name="dogBorderCollie">Border Collie</string>
@@ -31,7 +31,10 @@
     <string name="question8">Question 8: Select one or more options!</string>
 
     <string name="enterSol">Enter solution here</string>
-    <string name="submitAns">Submit answers</string>
+    <string name="nextQuestion">Next question</string>
+    <string name="showScore">Show my scores</string>
+    <string name="restartQuiz">Try again</string>
+    <string name="finishQuiz">Finish</string>
 
     <string name="resultMessage1">Congratulations! You answered <xliff:g id="goodAnswers" example="1">%d</xliff:g>
         out of 8 questions correctly! You are a dog expert!</string>
